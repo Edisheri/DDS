@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-12 12:06+0500\n"
+"PO-Revision-Date: 2025-05-12 12:06+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Russian <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\cashflow\filters.py:20
+msgid "Date Range"
+msgstr "Диапазон дат"
+
+#: .\cashflow\forms.py:30
+msgid "Enter amount..."
+msgstr "Введите сумму..."
+
+#: .\cashflow\forms.py:37
+msgid "Write something..."
+msgstr "Напишите что-нибудь..."
+
+#: .\templates\base.html:18
+msgid "CashFlow"
+msgstr "Денежный поток"
+
+#: .\templates\cashflow\add_record.html:10
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\templates\cashflow\add_record.html:10
+#: .\templates\cashflow\add_record.html:52
+#: .\templates\cashflow\add_record.html:76
+#: .\templates\cashflow\add_record.html:100
+#: .\templates\cashflow\add_record.html:126
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\cashflow\add_record.html:10
+msgid "Cash Flow Record"
+msgstr "Запись денежного потока"
+
+#: .\templates\cashflow\add_record.html:21
+#: .\templates\cashflow\record_list.html:59
+msgid "Date"
+msgstr "Дата"
+
+#: .\templates\cashflow\add_record.html:32
+#: .\templates\cashflow\record_list.html:64
+msgid "Amount"
+msgstr "Сумма"
+
+#: .\templates\cashflow\add_record.html:43
+#: .\templates\cashflow\record_list.html:60
+msgid "Status"
+msgstr "Статус"
+
+#: .\templates\cashflow\add_record.html:46
+msgid "Select status..."
+msgstr "Выберите статус..."
+
+#: .\templates\cashflow\add_record.html:57
+msgid "New status name"
+msgstr "Новое название статуса"
+
+#: .\templates\cashflow\add_record.html:59
+#: .\templates\cashflow\add_record.html:83
+#: .\templates\cashflow\add_record.html:107
+#: .\templates\cashflow\add_record.html:133
+#: .\templates\cashflow\add_record.html:154
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\cashflow\add_record.html:67
+#: .\templates\cashflow\record_list.html:61
+msgid "Type"
+msgstr "Тип"
+
+#: .\templates\cashflow\add_record.html:70
+msgid "Select type..."
+msgstr "Выберите тип..."
+
+#: .\templates\cashflow\add_record.html:81
+msgid "New type name"
+msgstr "Новое название типа"
+
+#: .\templates\cashflow\add_record.html:91
+#: .\templates\cashflow\record_list.html:62
+msgid "Category"
+msgstr "Категория"
+
+#: .\templates\cashflow\add_record.html:94
+msgid "Select category..."
+msgstr "Выберите категорию..."
+
+#: .\templates\cashflow\add_record.html:105
+msgid "New category name"
+msgstr "Новое название категории"
+
+#: .\templates\cashflow\add_record.html:115
+#: .\templates\cashflow\record_list.html:63
+msgid "Subcategory"
+msgstr "Подкатегория"
+
+#: .\templates\cashflow\add_record.html:118
+msgid "Select subcategory..."
+msgstr "Выберите подкатегорию..."
+
+#: .\templates\cashflow\add_record.html:131
+msgid "New subcategory name"
+msgstr "Новое название подкатегории"
+
+#: .\templates\cashflow\add_record.html:141
+#: .\templates\cashflow\record_list.html:65
+msgid "Comment"
+msgstr "Комментарий"
+
+#: .\templates\cashflow\add_record.html:151
+msgid "Cancel"
+msgstr "Отмена"
+
+#: .\templates\cashflow\add_record.html:154
+msgid "Update"
+msgstr "Обновить"
+
+#: .\templates\cashflow\add_record.html:154
+msgid "Record"
+msgstr "Запись"
+
+#: .\templates\cashflow\record_list.html:7
+msgid "Cash Flow Records"
+msgstr "Записи денежного потока"
+
+#: .\templates\cashflow\record_list.html:9
+msgid "Add New Record"
+msgstr "Добавить новую запись"
+
+#: .\templates\cashflow\record_list.html:11
+msgid "Toggle Filters"
+msgstr "Переключить фильтры"
+
+#: .\templates\cashflow\record_list.html:20
+msgid "Filter Records"
+msgstr "Фильтровать записи"
+
+#: .\templates\cashflow\record_list.html:43
+msgid "Apply Filters"
+msgstr "Применить фильтры"
+
+#: .\templates\cashflow\record_list.html:46
+msgid "Reset"
+msgstr "Сбросить"
+
+#: .\templates\cashflow\record_list.html:66
+msgid "Actions"
+msgstr "Действия"
+
+#: .\templates\cashflow\record_list.html:82
+msgid "Delete record"
+msgstr "Удалить запись"
+
+#: .\templates\cashflow\record_list.html:87
+msgid "Edit record"
+msgstr "Редактировать запись"
+
+#: .\templates\cashflow\record_list.html:94
+msgid "No records found matching your filters."
+msgstr "Записей, соответствующих вашим фильтрам, не найдено."
