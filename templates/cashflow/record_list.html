@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="container mt-4">
+    <!-- Page Header with Action Buttons -->
+    <h2>{% trans "Cash Flow Records" %}</h2>
+    <div class="mb-3">
+        <a href="{% url 'add_record' %}" class="btn btn-dark mb-3">{% trans "Add New Record" %}</a>
+        <button class="btn btn-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#filterSection">
+            {% trans "Toggle Filters" %}
+        </button>
+    </div>
+
+    <!-- Filter Section -->
+    <div id="filterSection" class="collapse mb-4">
+        <div class="card border-dark shadow-sm">
+            <div class="card-header bg-dark text-white">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-filter-circle me-2"></i> {% trans "Filter Records" %}
+                </h5>
+            </div>
+            <div class="card-body bg-light">
+                <form method="get" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        {% for field in filter.form %}
+                        <div class="{% if field.name == 'date' %}col-md-8{% else %}col-md-4{% endif %} col-sm-6">
+                            <div class="mb-3">
+                                <label for="{{ field.id_for_label }}" class="form-label fw-bold">
+                                    {{ field.label }}
+                                </label>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <div>
+                            <button type="submit" class="btn btn-dark px-4">
+                                <i class="bi bi-search me-1"></i> {% trans "Apply Filters" %}
+                            </button>
+                            <a href="{% url 'record_list' %}" class="btn btn-outline-secondary px-4 ms-2">
+                                <i class="bi bi-arrow-counterclockwise me-1"></i> {% trans "Reset" %}
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Records Table -->
+    <table class="table table-striped" data-csrf-token="{{ csrf_token }}">
+        <thead class="table-dark">
+            <tr>
+                <th>{% trans "Date" %}</th>
+                <th>{% trans "Status" %}</th>
+                <th>{% trans "Type" %}</th>
+                <th>{% trans "Category" %}</th>
+                <th>{% trans "Subcategory" %}</th>
+                <th>{% trans "Amount" %}</th>
+                <th>{% trans "Comment" %}</th>
+                <th>{% trans "Actions" %}</th>  <!-- New column for delete button -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.date|date:"Y-m-d" }}</td>
+                <td>{{ record.status.name }}</td>
+                <td>{{ record.type.name }}</td>
+                <td>{{ record.category.name }}</td>
+                <td>{{ record.subcategory.name }}</td>
+                <td>{{ record.amount }} ₽</td>
+                <td>{{ record.comment|default:""|truncatechars:50 }}</td>
+                <td class="text-center">
+                    <button class="btn btn-danger btn-sm delete-btn me-1 d-inline-block" 
+                            data-record-id="{{ record.id }}"
+                            title="{% trans 'Delete record' %}">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                    <button class="btn btn-success btn-sm edit-btn d-inline-block" 
+                            data-record-id="{{ record.id }}"
+                            title="{% trans 'Edit record' %}">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8" class="text-center py-4">{% trans "No records found matching your filters." %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<!-- CSS code -->
+<style>
+    .delete-btn {
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+    .delete-btn:hover {
+        opacity: 1;
+    }
+    .table th:last-child, .table td:last-child {
+        width: 90px;  /* Fixed width for actions column */
+    }
+</style>
+{% endblock %}
