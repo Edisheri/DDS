@@ -1,0 +1,46 @@
+# Django
+db.sqlite3
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+.venv/
+
+# Static files (collected)
+staticfiles/
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+node_modules/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Byte-compiled / optimized files
+*.py[cod]
+*$py.class
+
+# Build files
+build/
+dist/
+*.egg-info/
